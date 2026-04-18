@@ -52,7 +52,7 @@ export default function WhatsAppButton({
       `}
     >
       <img
-            src="https://iconos8.es/icon/7OeRNqg6S7Vf/whatsapp"
+            src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png"
             alt="WhatsApp"
             className={iconSizes[size]}
         />

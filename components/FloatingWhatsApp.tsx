@@ -27,7 +27,7 @@ export default function FloatingWhatsApp({ property, checkIn, checkOut }: Floati
       aria-label="Contactar por WhatsApp"
     >
       <img
-          src="https://iconos8.es/icon/7OeRNqg6S7Vf/whatsapp"
+          src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png"
           alt="WhatsApp"
           className="w-8 h-8"
         />
