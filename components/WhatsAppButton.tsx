@@ -19,9 +19,9 @@ export default function WhatsAppButton({
   const waLink = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`;
 
   const sizeClasses = {
-    sm: 'px-3 py-2 text-sm',
-    md: 'px-4 py-3 text-base',
-    lg: 'px-6 py-4 text-lg',
+    sm: 'px-4 py-2.5 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg',
   };
 
   const isDisabled = !property.isAvailable;
@@ -32,12 +32,12 @@ export default function WhatsAppButton({
         disabled
         className={`
           inline-flex items-center justify-center gap-2 w-full
-          bg-gray-400 text-white font-medium rounded-lg
+          bg-gray-400 text-white font-semibold rounded-xl
           cursor-not-allowed ${sizeClasses[size]} ${className}
         `}
       >
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M6.965 21a.5.5 0 0 1-.347-.166l-2.552-1.26a.5.5 0 0 1-.2-.634l.95-3.042a.5.5 0 0 1 .587-.408l2.267.757a.5.5 0 0 1 .343.488l-.5 2.75a.5.5 0 0 1-.346.315l-1.756.15zm.035-1.68l1.44-.123.875 2.512-1.63-.544.315-1.845zM17.5 3a9 9 0 0 0-9 9v.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V12a9 9 0 0 0 7.5-7.5h2a.5.5 0 0 1 .5.5v-.5a.5.5 0 0 0-.5-.5h-5.5a.5.5 0 0 1-.5-.5V4a9 9 0 0 1 9 9h0v-.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V12a9 9 0 0 1-9 9 9 0 0 1-9-9H3a.5.5 0 0 1-.5-.5V12a9 9 0 0 0 9-9 .5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v.5a9 9 0 0 0 4 0V12a9 9 0 0 1-4 0V3h.5z"/>
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
         </svg>
         No disponible
       </button>
@@ -50,9 +50,9 @@ export default function WhatsAppButton({
       target="_blank"
       rel="noopener noreferrer"
       className={`
-        inline-flex items-center justify-center gap-2 
-        bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg
-        transition-colors duration-200 ${sizeClasses[size]} ${className}
+        inline-flex items-center justify-center gap-3 
+        bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl
+        transition-all duration-200 hover:shadow-lg hover:shadow-emerald-500/25 ${sizeClasses[size]} ${className}
       `}
     >
       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
