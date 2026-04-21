@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "title": "Penthouse Luxury en El Poblado",
+    "type": "Penthouse",
+    "city": "Medellín",
+    "neighborhood": "El Poblado",
+    "description": "Espectacular penthouse con vista panorámica a la ciudad. Ubicado en la zona más exclusiva de Medellín, a pocos pasos de restaurantes, bares y centros comerciales. Perfecto para parejas o profesionales que buscan comodidad y lujo. El inmueble cuenta con acabados de primera, cocina fully equipped y balcón privado.",
+    "price": 4500000,
+    "coverPhoto": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+    ],
+    "features": {
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "area": 120
+    },
+    "isAvailable": true
+  },
+  {
+    "id": "2",
+    "title": "Casa Colonial en Centro Histórico",
+    "type": "Casa",
+    "city": "Cartagena",
+    "neighborhood": "Centro Histórico",
+    "description": "Hermosa casa colonial restaurada en el corazón de Cartagena. Paredes de piedra original, techos de madera tallada y patio interno con piscina. A solo 2 cuadras de la Plaza de la Catedral. La experiencia perfecta para immergirse en la magia de la ciudad amurallada. Ideal para familias o grupos que buscan autenticidad.",
+    "price": 6800000,
+    "coverPhoto": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600573472591-ee6c563aaec3?w=800&q=80",
+      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cd87?w=800&q=80"
+    ],
+    "features": {
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "area": 250
+    },
+    "isAvailable": true
+  },
+  {
+    "id": "3",
+    "title": "Apartamento Moderno en Chapinero",
+    "type": "Apartamento",
+    "city": "Bogotá",
+    "neighborhood": "Chapinero",
+    "description": "Apartamento moderno en la zona más vibrante de Bogotá. Cerca de parques, universidades y vida nocturna. Ideal para jóvenes profesionales. Wifi de alta velocidad incluido. El edificio cuenta con gimnasio y zona de coworking. Excelente ubicación con acceso fácil al transporte público.",
+    "price": 2800000,
+    "coverPhoto": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80"
+    ],
+    "features": {
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "area": 65
+    },
+    "isAvailable": false
+  },
+  {
+    "id": "4",
+    "title": "Villa Frente al Mar en Rodadero",
+    "type": "Villa",
+    "city": "Santa Marta",
+    "neighborhood": "Rodadero",
+    "description": "Increíble villa con acceso directo a la playa. Vista al mar desde la habitación principal. Incluye piscina privada, área de BBQ y jardín tropical. Perfecto para familias que buscan relajarse en el Caribe colombiano. La propiedad cuenta con servicio de limpieza incluido y cocina completamente equipada.",
+    "price": 8500000,
+    "coverPhoto": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
+    "photos": [
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+      "https://images.unsplash.com/photo-1600573472591-ee6c563aaec3?w=800&q=80"
+    ],
+    "features": {
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "area": 320
+    },
+    "isAvailable": true
+  }
+]

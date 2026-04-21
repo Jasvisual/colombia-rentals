@@ -1,32 +1,25 @@
 export interface Property {
   id: string;
   title: string;
+  type: 'Apartamento' | 'Casa' | 'Penthouse' | 'Loft' | 'Villa' | 'Cabaña';
   city: 'Medellín' | 'Cartagena' | 'Bogotá' | 'Santa Marta';
   neighborhood: string;
   description: string;
-  pricePerNight: number;
-  rating: number;
-  reviewCount: number;
+  price: number;
   coverPhoto: string;
   photos: string[];
-  amenities: ('wifi' | 'pool' | 'parking' | 'ac' | 'kitchen' | 'washer' | 'tv' | 'hotTub')[];
-  host: {
-    name: string;
-    photo: string;
-    responseTime: string;
+  features: {
+    bedrooms: number;
+    bathrooms: number;
+    area?: number;
   };
-  maxGuests: number;
-  bedrooms: number;
-  beds: number;
-  baths: number;
+  isAvailable: boolean;
 }
 
 export interface SearchFilters {
+  type: string;
   city: string;
-  checkIn: string;
-  checkOut: string;
-  guests: number;
-  priceMin: number;
-  priceMax: number;
-  amenities: string[];
+  neighborhood: string;
+  bedrooms: number | null;
+  bathrooms: number | null;
 }
