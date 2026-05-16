@@ -1,18 +1,29 @@
 export interface Property {
   id: string;
   title: string;
-  type: 'Apartamento' | 'Casa' | 'Penthouse' | 'Loft' | 'Villa' | 'Cabaña';
-  city: 'Medellín' | 'Cartagena' | 'Bogotá' | 'Santa Marta';
+  type: string;
+  city: string;
   neighborhood: string;
   description: string;
   price: number;
+  pricePerNight?: number;
+  rating?: number;
+  reviewCount?: number;
   coverPhoto: string;
   photos: string[];
   features: {
     bedrooms: number;
     bathrooms: number;
+    beds?: number;
     area?: number;
   };
+  amenities?: string[];
+  host?: {
+    name: string;
+    photo: string;
+    responseTime: string;
+  };
+  maxGuests?: number;
   isAvailable: boolean;
 }
 
