@@ -6,7 +6,9 @@ export interface Property {
   neighborhood: string;
   description: string;
   price: number;
+  priceUSD: number;
   pricePerNight?: number;
+  pricePerNightUSD?: number;
   rating?: number;
   reviewCount?: number;
   coverPhoto: string;
@@ -17,6 +19,10 @@ export interface Property {
     beds?: number;
     area?: number;
   };
+  extraFeatures?: {
+    label: string;
+    icon: string;
+  }[];
   amenities?: string[];
   host?: {
     name: string;

@@ -5,6 +5,8 @@ import { properties } from '@/data/properties';
 import PropertyCard from '@/components/PropertyCard';
 import SearchBar, { SearchFilters } from '@/components/SearchBar';
 
+const ITEMS_PER_PAGE = 8;
+
 export default function Home() {
   const [filters, setFilters] = useState<SearchFilters>({
     type: '',
@@ -13,6 +15,7 @@ export default function Home() {
     bedrooms: null,
     bathrooms: null,
   });
+  const [page, setPage] = useState(1);
 
   const filteredProperties = useMemo(() => {
     return properties.filter((property) => {
@@ -36,6 +39,9 @@ export default function Home() {
       return true;
     });
   }, [filters]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredProperties.length / ITEMS_PER_PAGE));
+  const paginatedProperties = filteredProperties.slice(0, page * ITEMS_PER_PAGE);
 
   const cities = [...new Set(properties.map(p => p.city))];
 
@@ -95,7 +101,7 @@ export default function Home() {
             {cities.map((city) => (
               <button
                 key={city}
-                onClick={() => setFilters({ ...filters, city: filters.city === city ? '' : city })}
+                onClick={() => { setFilters({ ...filters, city: filters.city === city ? '' : city }); setPage(1); }}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   filters.city === city
                     ? 'bg-emerald-600 text-white'
@@ -107,7 +113,7 @@ export default function Home() {
             ))}
             {Object.values(filters).some(f => f !== '' && f !== null) && (
               <button
-                onClick={() => setFilters({ type: '', city: '', neighborhood: '', bedrooms: null, bathrooms: null })}
+                onClick={() => { setFilters({ type: '', city: '', neighborhood: '', bedrooms: null, bathrooms: null }); setPage(1); }}
                 className="px-4 py-2 rounded-full text-sm font-medium text-red-600 hover:bg-red-50 transition-all"
               >
                 Limpiar filtros
@@ -117,11 +123,27 @@ export default function Home() {
         </div>
 
         {filteredProperties.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProperties.map((property) => (
-              <PropertyCard key={property.id} property={property} />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {paginatedProperties.map((property) => (
+                <PropertyCard key={property.id} property={property} />
+              ))}
+            </div>
+
+            {totalPages > 1 && page < totalPages && (
+              <div className="flex justify-center mt-12">
+                <button
+                  onClick={() => setPage(p => p + 1)}
+                  className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-emerald-600/25"
+                >
+                  Ver más propiedades
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
+            )}
+          </>
         ) : (
           <div className="text-center py-16 bg-white rounded-2xl border border-gray-100">
             <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -132,7 +154,7 @@ export default function Home() {
             <p className="text-gray-500 text-lg mb-2">No se encontraron propiedades</p>
             <p className="text-gray-400 text-sm mb-4">Intenta con otros filtros de búsqueda</p>
             <button
-              onClick={() => setFilters({ type: '', city: '', neighborhood: '', bedrooms: null, bathrooms: null })}
+              onClick={() => { setFilters({ type: '', city: '', neighborhood: '', bedrooms: null, bathrooms: null }); setPage(1); }}
               className="text-emerald-600 hover:text-emerald-700 font-medium"
             >
               Ver todas las propiedades

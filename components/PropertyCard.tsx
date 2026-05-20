@@ -8,12 +8,12 @@ interface PropertyCardProps {
   property: Property;
 }
 
-function formatPrice(cop: number): string {
-  return new Intl.NumberFormat('es-CO', {
+function formatUSD(amount: number): string {
+  return new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: 'COP',
+    currency: 'USD',
     maximumFractionDigits: 0,
-  }).format(cop);
+  }).format(amount);
 }
 
 export default function PropertyCard({ property }: PropertyCardProps) {
@@ -63,13 +63,13 @@ export default function PropertyCard({ property }: PropertyCardProps) {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
               </svg>
-              {property.features.bedrooms} hab
+              {property.features.bedrooms} {property.features.bedrooms === 1 ? 'hab' : 'hab'}
             </span>
             <span className="flex items-center gap-1.5">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
               </svg>
-              {property.features.bathrooms} baños
+              {property.features.bathrooms} {property.features.bathrooms === 1 ? 'baño' : 'baños'}
             </span>
             {property.features.area && (
               <span className="flex items-center gap-1.5">
@@ -84,9 +84,9 @@ export default function PropertyCard({ property }: PropertyCardProps) {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-2xl font-bold text-emerald-600">
-                {formatPrice(property.price)}
+                {formatUSD(property.pricePerNightUSD || 0)}
               </p>
-              <p className="text-xs text-gray-400">Precio por mes</p>
+              <p className="text-xs text-gray-400">USD / noche</p>
             </div>
             <span className="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition-colors">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
