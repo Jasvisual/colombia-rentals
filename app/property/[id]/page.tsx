@@ -15,27 +15,20 @@ function formatUSD(amount: number): string {
   }).format(amount);
 }
 
-const featureIcons: Record<string, { path: string; label: string }> = {
-  bedrooms: { 
-    path: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6', 
-    label: 'Habitaciones' 
-  },
-  bathrooms: { 
-    path: 'M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z', 
-    label: 'Baños' 
-  },
-  beds: { 
-    path: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4', 
-    label: 'Camas' 
-  },
-  guests: { 
-    path: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z', 
-    label: 'Huéspedes' 
-  },
-  area: { 
-    path: 'M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4', 
-    label: 'Área' 
-  },
+const featureIcons: Record<string, string> = {
+  bedrooms: 'fi fi-rr-bed',
+  bathrooms: 'fi fi-rr-bath',
+  beds: 'fi fi-rr-bed',
+  guests: 'fi fi-rr-people',
+  area: 'fi fi-rr-expand-arrows-alt',
+};
+
+const featureLabels: Record<string, string> = {
+  bedrooms: 'Habitaciones',
+  bathrooms: 'Baños',
+  beds: 'Camas',
+  guests: 'Huéspedes',
+  area: 'Área',
 };
 
 export default function PropertyPage({ params }: { params: Promise<{ id: string }> }) {
@@ -154,13 +147,11 @@ export default function PropertyPage({ params }: { params: Promise<{ id: string 
                 {mainFeatures.map(({ key, value, suffix }) => (
                   <div key={key} className="flex flex-col items-center gap-3 text-center">
                     <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center">
-                      <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={featureIcons[key]?.path} />
-                      </svg>
+                      <i className={`${featureIcons[key] || 'fi fi-rr-circle'} text-emerald-600 text-xl leading-none`}></i>
                     </div>
                     <div>
                       <p className="text-2xl font-bold text-gray-900">{value}{suffix}</p>
-                      <p className="text-sm text-gray-500">{featureIcons[key]?.label}</p>
+                      <p className="text-sm text-gray-500">{featureLabels[key]}</p>
                     </div>
                   </div>
                 ))}
@@ -174,7 +165,7 @@ export default function PropertyPage({ params }: { params: Promise<{ id: string 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {property.extraFeatures.map((feat, i) => (
                     <div key={i} className="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
-                      <span className="text-2xl">{feat.icon}</span>
+                      <i className={`${feat.icon} text-emerald-600 text-lg leading-none`}></i>
                       <span className="text-sm font-medium text-gray-700">{feat.label}</span>
                     </div>
                   ))}
@@ -196,7 +187,7 @@ export default function PropertyPage({ params }: { params: Promise<{ id: string 
               </p>
               <div className="h-72 rounded-xl overflow-hidden">
                 <iframe
-                  src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDTHlYxF62U9MvXcfIdzH3H_S7COh4H5aw&q=${mapsQuery}&zoom=14&language=es`}
+                  src={`https://maps.google.com/maps?q=${mapsQuery}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

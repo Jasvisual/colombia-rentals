@@ -22,6 +22,9 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
       'https://images.unsplash.com/photo-1600573472591-ee6c563aaec3?w=800&q=80',
       'https://images.unsplash.com/photo-1600047509807-ba8f99d2cd87?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80',
+      'https://images.unsplash.com/photo-1600585152915-d208bec867a1?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566752580-3d3f1b2f9c6e?w=800&q=80',
     ],
     features: {
       bedrooms: 2,
@@ -30,9 +33,9 @@ export const properties: Property[] = [
       area: 120,
     },
     extraFeatures: [
-      { label: 'Balcón privado', icon: '🏔️' },
-      { label: 'Vista panorámica', icon: '🌇' },
-      { label: 'Gimnasio', icon: '🏋️' },
+      { label: 'Balcón privado', icon: 'fi fi-rr-mountain' },
+      { label: 'Vista panorámica', icon: 'fi fi-rr-city' },
+      { label: 'Gimnasio', icon: 'fi fi-rr-dumbbell' },
     ],
     amenities: ['wifi', 'ac', 'pool', 'parking', 'tv', 'kitchen'],
     host: {
@@ -64,6 +67,9 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1600047509807-ba8f99d2cd87?w=800&q=80',
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+      'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80',
     ],
     features: {
       bedrooms: 3,
@@ -72,9 +78,9 @@ export const properties: Property[] = [
       area: 250,
     },
     extraFeatures: [
-      { label: 'Patio interno', icon: '🌿' },
-      { label: 'Chimenea', icon: '🔥' },
-      { label: 'Terraza', icon: '☀️' },
+      { label: 'Patio interno', icon: 'fi fi-rr-leaf' },
+      { label: 'Chimenea', icon: 'fi fi-rr-fire' },
+      { label: 'Terraza', icon: 'fi fi-rr-sun' },
     ],
     amenities: ['wifi', 'pool', 'ac', 'kitchen', 'tv', 'washer'],
     host: {
@@ -106,6 +112,9 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80',
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+      'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80',
     ],
     features: {
       bedrooms: 1,
@@ -114,8 +123,8 @@ export const properties: Property[] = [
       area: 65,
     },
     extraFeatures: [
-      { label: 'Zona de coworking', icon: '💻' },
-      { label: 'Balcón', icon: '🏙️' },
+      { label: 'Zona de coworking', icon: 'fi fi-rr-laptop' },
+      { label: 'Balcón', icon: 'fi fi-rr-building' },
     ],
     amenities: ['wifi', 'tv', 'kitchen', 'washer'],
     host: {
@@ -147,6 +156,9 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1600573472591-ee6c563aaec3?w=800&q=80',
       'https://images.unsplash.com/photo-1600047509807-ba8f99d2cd87?w=800&q=80',
       'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80',
     ],
     features: {
       bedrooms: 4,
@@ -155,10 +167,10 @@ export const properties: Property[] = [
       area: 320,
     },
     extraFeatures: [
-      { label: 'Piscina privada', icon: '🏊' },
-      { label: 'BBQ', icon: '🍖' },
-      { label: 'Acceso directo a playa', icon: '🏖️' },
-      { label: 'Estacionamiento', icon: '🅿️' },
+      { label: 'Piscina privada', icon: 'fi fi-rr-swimmer' },
+      { label: 'BBQ', icon: 'fi fi-rr-grill' },
+      { label: 'Acceso directo a playa', icon: 'fi fi-rr-umbrella-beach' },
+      { label: 'Estacionamiento', icon: 'fi fi-rr-parking' },
     ],
     amenities: ['wifi', 'pool', 'parking', 'ac', 'kitchen', 'tv', 'hotTub'],
     host: {
@@ -190,6 +202,9 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80',
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+      'https://images.unsplash.com/photo-1600047509807-ba8f99d2cd87?w=800&q=80',
+      'https://images.unsplash.com/photo-1600573472591-ee6c563aaec3?w=800&q=80',
     ],
     features: {
       bedrooms: 1,
@@ -198,8 +213,8 @@ export const properties: Property[] = [
       area: 55,
     },
     extraFeatures: [
-      { label: 'Diseño industrial', icon: '🏭' },
-      { label: 'Ladrillo visto', icon: '🧱' },
+      { label: 'Diseño industrial', icon: 'fi fi-rr-industry' },
+      { label: 'Ladrillo visto', icon: 'fi fi-rr-wall' },
     ],
     amenities: ['wifi', 'ac', 'parking', 'tv', 'kitchen'],
     host: {
@@ -231,6 +246,9 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
       'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80',
+      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80',
     ],
     features: {
       bedrooms: 2,
@@ -239,9 +257,9 @@ export const properties: Property[] = [
       area: 90,
     },
     extraFeatures: [
-      { label: 'Vista al mar', icon: '🌊' },
-      { label: 'Balcón', icon: '🏙️' },
-      { label: 'Seguridad 24h', icon: '🔒' },
+      { label: 'Vista al mar', icon: 'fi fi-rr-wave' },
+      { label: 'Balcón', icon: 'fi fi-rr-building' },
+      { label: 'Seguridad 24h', icon: 'fi fi-rr-shield' },
     ],
     amenities: ['wifi', 'pool', 'ac', 'parking', 'tv', 'kitchen'],
     host: {
@@ -273,6 +291,9 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1600047509807-ba8f99d2cd87?w=800&q=80',
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80',
+      'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&q=80',
     ],
     features: {
       bedrooms: 3,
@@ -281,9 +302,9 @@ export const properties: Property[] = [
       area: 150,
     },
     extraFeatures: [
-      { label: 'Chimenea', icon: '🔥' },
-      { label: 'Vista a los Andes', icon: '🏔️' },
-      { label: 'Jacuzzi exterior', icon: '🛁' },
+      { label: 'Chimenea', icon: 'fi fi-rr-fire' },
+      { label: 'Vista a los Andes', icon: 'fi fi-rr-mountain' },
+      { label: 'Jacuzzi exterior', icon: 'fi fi-rr-bath' },
     ],
     amenities: ['wifi', 'parking', 'kitchen', 'tv', 'hotTub'],
     host: {
@@ -315,6 +336,9 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
       'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80',
+      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80',
     ],
     features: {
       bedrooms: 2,
@@ -323,9 +347,9 @@ export const properties: Property[] = [
       area: 80,
     },
     extraFeatures: [
-      { label: 'Cascada privada', icon: '💧' },
-      { label: 'Senderos ecológicos', icon: '🌿' },
-      { label: 'Materiales reciclados', icon: '♻️' },
+      { label: 'Cascada privada', icon: 'fi fi-rr-drop' },
+      { label: 'Senderos ecológicos', icon: 'fi fi-rr-leaf' },
+      { label: 'Materiales reciclados', icon: 'fi fi-rr-recycle' },
     ],
     amenities: ['wifi', 'pool', 'parking', 'kitchen'],
     host: {
@@ -358,6 +382,8 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1600573472591-ee6c563aaec3?w=800&q=80',
       'https://images.unsplash.com/photo-1600047509807-ba8f99d2cd87?w=800&q=80',
       'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80',
+      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80',
     ],
     features: {
       bedrooms: 3,
@@ -366,10 +392,10 @@ export const properties: Property[] = [
       area: 180,
     },
     extraFeatures: [
-      { label: 'Terraza con jacuzzi', icon: '🛁' },
-      { label: 'Bar privado', icon: '🍸' },
-      { label: 'Vista 360°', icon: '🌆' },
-      { label: 'Domótica', icon: '🤖' },
+      { label: 'Terraza con jacuzzi', icon: 'fi fi-rr-bath' },
+      { label: 'Bar privado', icon: 'fi fi-rr-cocktail' },
+      { label: 'Vista 360°', icon: 'fi fi-rr-city' },
+      { label: 'Domótica', icon: 'fi fi-rr-robot' },
     ],
     amenities: ['wifi', 'ac', 'pool', 'parking', 'tv', 'kitchen', 'washer'],
     host: {
@@ -402,6 +428,8 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80',
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
       'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80',
+      'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&q=80',
     ],
     features: {
       bedrooms: 3,
@@ -410,9 +438,9 @@ export const properties: Property[] = [
       area: 200,
     },
     extraFeatures: [
-      { label: 'Roof top con piscina', icon: '🏊' },
-      { label: 'Terraza', icon: '☀️' },
-      { label: 'Arte local', icon: '🎨' },
+      { label: 'Roof top con piscina', icon: 'fi fi-rr-swimmer' },
+      { label: 'Terraza', icon: 'fi fi-rr-sun' },
+      { label: 'Arte local', icon: 'fi fi-rr-palette' },
     ],
     amenities: ['wifi', 'pool', 'ac', 'kitchen', 'tv', 'washer'],
     host: {
@@ -444,6 +472,9 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80',
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+      'https://images.unsplash.com/photo-1600573472591-ee6c563aaec3?w=800&q=80',
     ],
     features: {
       bedrooms: 1,
@@ -452,8 +483,8 @@ export const properties: Property[] = [
       area: 60,
     },
     extraFeatures: [
-      { label: 'Altillo', icon: '🏗️' },
-      { label: 'Cerca a mercado', icon: '🏺' },
+      { label: 'Altillo', icon: 'fi fi-rr-tools' },
+      { label: 'Cerca a mercado', icon: 'fi fi-rr-market' },
     ],
     amenities: ['wifi', 'ac', 'parking', 'tv', 'kitchen'],
     host: {
@@ -486,6 +517,8 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1600047509807-ba8f99d2cd87?w=800&q=80',
       'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80',
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80',
+      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80',
     ],
     features: {
       bedrooms: 5,
@@ -494,11 +527,11 @@ export const properties: Property[] = [
       area: 500,
     },
     extraFeatures: [
-      { label: 'Playa privada', icon: '🏖️' },
-      { label: 'Muelle', icon: '⛵' },
-      { label: 'Cancha de tenis', icon: '🎾' },
-      { label: 'Piscina olímpica', icon: '🏊' },
-      { label: 'Mayordomo', icon: '🤵' },
+      { label: 'Playa privada', icon: 'fi fi-rr-umbrella-beach' },
+      { label: 'Muelle', icon: 'fi fi-rr-sailboat' },
+      { label: 'Cancha de tenis', icon: 'fi fi-rr-tennis' },
+      { label: 'Piscina olímpica', icon: 'fi fi-rr-swimmer' },
+      { label: 'Mayordomo', icon: 'fi fi-rr-suit' },
     ],
     amenities: ['wifi', 'pool', 'parking', 'ac', 'kitchen', 'tv', 'washer', 'hotTub'],
     host: {
@@ -530,6 +563,9 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80',
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+      'https://images.unsplash.com/photo-1600047509807-ba8f99d2cd87?w=800&q=80',
+      'https://images.unsplash.com/photo-1600573472591-ee6c563aaec3?w=800&q=80',
     ],
     features: {
       bedrooms: 2,
@@ -538,9 +574,9 @@ export const properties: Property[] = [
       area: 75,
     },
     extraFeatures: [
-      { label: 'Zona de trabajo', icon: '💼' },
-      { label: 'Cerca al aeropuerto', icon: '✈️' },
-      { label: 'Parqueadero visitas', icon: '🅿️' },
+      { label: 'Zona de trabajo', icon: 'fi fi-rr-briefcase' },
+      { label: 'Cerca al aeropuerto', icon: 'fi fi-rr-plane' },
+      { label: 'Parqueadero visitas', icon: 'fi fi-rr-parking' },
     ],
     amenities: ['wifi', 'ac', 'parking', 'tv', 'kitchen', 'washer'],
     host: {
@@ -573,6 +609,8 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80',
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
       'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80',
+      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80',
     ],
     features: {
       bedrooms: 1,
@@ -581,10 +619,10 @@ export const properties: Property[] = [
       area: 45,
     },
     extraFeatures: [
-      { label: 'Cúpula estrellas', icon: '⭐' },
-      { label: 'Tour del café', icon: '☕' },
-      { label: 'Paseo a caballo', icon: '🐴' },
-      { label: 'Desayuno típico', icon: '🥘' },
+      { label: 'Cúpula estrellas', icon: 'fi fi-rr-star' },
+      { label: 'Tour del café', icon: 'fi fi-rr-coffee' },
+      { label: 'Paseo a caballo', icon: 'fi fi-rr-horse' },
+      { label: 'Desayuno típico', icon: 'fi fi-rr-utensils' },
     ],
     amenities: ['wifi', 'parking', 'kitchen', 'tv', 'hotTub'],
     host: {
@@ -617,6 +655,8 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1600573472591-ee6c563aaec3?w=800&q=80',
       'https://images.unsplash.com/photo-1600047509807-ba8f99d2cd87?w=800&q=80',
       'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80',
+      'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=800&q=80',
     ],
     features: {
       bedrooms: 5,
@@ -625,10 +665,10 @@ export const properties: Property[] = [
       area: 400,
     },
     extraFeatures: [
-      { label: 'Lago artificial', icon: '🌊' },
-      { label: 'Capilla', icon: '⛪' },
-      { label: 'Zona de eventos', icon: '🎉' },
-      { label: 'Jardines', icon: '🌺' },
+      { label: 'Lago artificial', icon: 'fi fi-rr-wave' },
+      { label: 'Capilla', icon: 'fi fi-rr-church' },
+      { label: 'Zona de eventos', icon: 'fi fi-rr-party' },
+      { label: 'Jardines', icon: 'fi fi-rr-flower' },
     ],
     amenities: ['wifi', 'pool', 'parking', 'ac', 'kitchen', 'tv', 'washer', 'hotTub'],
     host: {
@@ -661,6 +701,8 @@ export const properties: Property[] = [
       'https://images.unsplash.com/photo-1600047509807-ba8f99d2cd87?w=800&q=80',
       'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80',
       'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80',
+      'https://images.unsplash.com/photo-1600566752229-250ed79470f8?w=800&q=80',
+      'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80',
     ],
     features: {
       bedrooms: 4,
@@ -669,10 +711,10 @@ export const properties: Property[] = [
       area: 250,
     },
     extraFeatures: [
-      { label: 'Cine en casa', icon: '🎬' },
-      { label: 'Mayordomo 24/7', icon: '🤵' },
-      { label: 'Piscina terraza', icon: '🏊' },
-      { label: 'Vista al mar total', icon: '🌊' },
+      { label: 'Cine en casa', icon: 'fi fi-rr-clapperboard' },
+      { label: 'Mayordomo 24/7', icon: 'fi fi-rr-suit' },
+      { label: 'Piscina terraza', icon: 'fi fi-rr-swimmer' },
+      { label: 'Vista al mar total', icon: 'fi fi-rr-wave' },
     ],
     amenities: ['wifi', 'pool', 'ac', 'parking', 'tv', 'kitchen', 'washer', 'hotTub'],
     host: {

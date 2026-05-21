@@ -41,9 +41,10 @@ export default function Home() {
   }, [filters]);
 
   const totalPages = Math.max(1, Math.ceil(filteredProperties.length / ITEMS_PER_PAGE));
-  const paginatedProperties = filteredProperties.slice(0, page * ITEMS_PER_PAGE);
-
-  const cities = [...new Set(properties.map(p => p.city))];
+  const paginatedProperties = filteredProperties.slice(
+    (page - 1) * ITEMS_PER_PAGE,
+    page * ITEMS_PER_PAGE
+  );
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -66,60 +67,18 @@ export default function Home() {
           </div>
 
           <SearchBar onSearch={setFilters} />
-
-          {/* Stats */}
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16 mt-12">
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-white">500+</p>
-              <p className="text-slate-400 text-sm">Propiedades</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-white">4</p>
-              <p className="text-slate-400 text-sm">Ciudades</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-white">98%</p>
-              <p className="text-slate-400 text-sm">Clientes satisfechos</p>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Properties Section */}
       <section className="max-w-7xl mx-auto px-4 py-16">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-4">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-              Propiedades destacadas
-            </h2>
-            <p className="text-gray-500 mt-1">
-              {filteredProperties.length} inmueble{filteredProperties.length !== 1 ? 's' : ''} encontrado{filteredProperties.length !== 1 ? 's' : ''}
-            </p>
-          </div>
-          
-          <div className="flex items-center gap-2 flex-wrap">
-            {cities.map((city) => (
-              <button
-                key={city}
-                onClick={() => { setFilters({ ...filters, city: filters.city === city ? '' : city }); setPage(1); }}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  filters.city === city
-                    ? 'bg-emerald-600 text-white'
-                    : 'bg-white text-gray-600 border border-gray-200 hover:border-emerald-500 hover:text-emerald-600'
-                }`}
-              >
-                {city}
-              </button>
-            ))}
-            {Object.values(filters).some(f => f !== '' && f !== null) && (
-              <button
-                onClick={() => { setFilters({ type: '', city: '', neighborhood: '', bedrooms: null, bathrooms: null }); setPage(1); }}
-                className="px-4 py-2 rounded-full text-sm font-medium text-red-600 hover:bg-red-50 transition-all"
-              >
-                Limpiar filtros
-              </button>
-            )}
-          </div>
+        <div className="mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+            Propiedades destacadas
+          </h2>
+          <p className="text-gray-500 mt-1">
+            {filteredProperties.length} inmueble{filteredProperties.length !== 1 ? 's' : ''} encontrado{filteredProperties.length !== 1 ? 's' : ''}
+          </p>
         </div>
 
         {filteredProperties.length > 0 ? (
@@ -130,17 +89,58 @@ export default function Home() {
               ))}
             </div>
 
-            {totalPages > 1 && page < totalPages && (
-              <div className="flex justify-center mt-12">
-                <button
-                  onClick={() => setPage(p => p + 1)}
-                  className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-emerald-600/25"
-                >
-                  Ver más propiedades
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
+            {totalPages > 1 && (
+              <div className="mt-12 space-y-8">
+                {/* Stats */}
+                <div className="flex flex-wrap justify-center gap-8 md:gap-16">
+                  <div className="text-center">
+                    <p className="text-3xl md:text-4xl font-bold text-gray-900">500+</p>
+                    <p className="text-gray-500 text-sm">Propiedades</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-3xl md:text-4xl font-bold text-gray-900">4</p>
+                    <p className="text-gray-500 text-sm">Ciudades</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-3xl md:text-4xl font-bold text-gray-900">98%</p>
+                    <p className="text-gray-500 text-sm">Clientes satisfechos</p>
+                  </div>
+                </div>
+
+                {/* Paginator */}
+                <div className="flex justify-center items-center gap-2">
+                  <button
+                    onClick={() => setPage(p => Math.max(1, p - 1))}
+                    disabled={page === 1}
+                    className="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-medium transition-all disabled:opacity-30 disabled:cursor-not-allowed bg-white border border-gray-200 text-gray-600 hover:border-emerald-500 hover:text-emerald-600"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+                    <button
+                      key={p}
+                      onClick={() => setPage(p)}
+                      className={`w-10 h-10 rounded-xl flex items-center justify-center text-sm font-medium transition-all ${
+                        page === p
+                          ? 'bg-emerald-600 text-white shadow-md'
+                          : 'bg-white border border-gray-200 text-gray-600 hover:border-emerald-500 hover:text-emerald-600'
+                      }`}
+                    >
+                      {p}
+                    </button>
+                  ))}
+                  <button
+                    onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+                    disabled={page === totalPages}
+                    className="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-medium transition-all disabled:opacity-30 disabled:cursor-not-allowed bg-white border border-gray-200 text-gray-600 hover:border-emerald-500 hover:text-emerald-600"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             )}
           </>
